@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Firma LOVB</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .box{
+      width: 30%;
+      display: flex;
+    }
+    .letra{
+      height: 40px;
+      opacity: 0;
+    }
+    .logo{
+      height: 40px;
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div><img class="letra" src="firma_L.png" alt="L"></div>
+    <div><a href="http://lovb.github.io" target="_blank"><img class="logo" src="firma_LOGO.png" alt="LOGO"></a></div>
+    <div><img class="letra" src="firma_VB.png" alt="L"></div>
+    <div><img class="letra" src="firma_github.png" alt="L"></div>
+</div>
+
+<!-- script de jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $("a").mouseenter(function(){
+      $(".letra").animate({
+        opacity: 1,}, 1000);
+    });
+    $("a").mouseleave(function(){
+        $(".letra").animate({
+        opacity: 0,}, 1000);
+    });
+  });
+</script>
+</body>
+</html>
